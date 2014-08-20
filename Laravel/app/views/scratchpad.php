@@ -1,17 +1,19 @@
 <html>
  <head></head>
  <body>
-  <?php
+  	<?php
+  		class Anime {
+  			public $show_episode = '';
+  			public $length_episode = '';
+  			public function set_episode($show, $length) {
+  				$this->first_name = $show;
+  				$this->last_name = $length;
+  			}
+  		}
 
-
-	
-			function t_list ($first_name, $last_name, $phone_number) {
-				$person = array ("first_name" => "$first_name", "last_name" => "$last_name", "phone_number" => "$phone_number");
-					return $person;
-
-			}
-			
-			t_list("Jose", "Cabrera", "559-000-0000");
-		?>
+  		$naruto = new anime;
+  		$naruto->set_episode('Sakura', 'Rock Lee');
+  		$s
+	?>
  </body>
 </html>
