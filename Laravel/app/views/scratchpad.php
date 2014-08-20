@@ -13,7 +13,11 @@
 
   		$naruto = new anime;
   		$naruto->set_episode('Sakura', 'Rock Lee');
-  		$s
+  		$luffy = new anime;
+  		$luffy->set_episode('Zorro', 'nami');
+  		var_dump($naruto);
+  		var_dump($luffy);
+
 	?>
  </body>
 </html>
