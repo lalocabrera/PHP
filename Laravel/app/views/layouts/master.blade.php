@@ -6,12 +6,7 @@
 	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
 	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css">
 	{{HTML::style('css/styles.css')}}
-	<style>
-		body {
-			background-image: url('http://myclone.files.wordpress.com/2011/05/machinetop_background.jpg');
-			color: #fff; 
-		}
-	</style>
+	
 
 	<meta charset="UTF-8">
 	<title>Geekwise Twitter</title>
