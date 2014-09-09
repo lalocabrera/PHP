@@ -34,26 +34,36 @@
     				</div>
 
     				<div class="comment-box">
-    					<h1>Full Name</h1>
+						
+    					<h1>{{{ $first_name }}}</h1>
 							<p class="navbar-text">What's on your mind?</p>
-  							<textarea class="form-control" rows="3" style="width: 350px; float: left;"></textarea>
-  							<button type="post" class="btn btn-default pull-right">Post</button>
+							<form method="post" action="/message">
+  								<textarea class="form-control" name="body" rows="3" style="width: 350px; float: left;"></textarea>
+  								<button type="submit" class="btn btn-default pull-right">Post</button>
+							</form>
   					</div>
 
   					<div class="comment-box-posting">
-  						<img src="http://placehold.it/40x40" alt="..." class="img-thumbnail">
-							<div class="paragraph-comment-box">
-  								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae fugiat, sed pariatur ab quaerat sit, nam voluptate hic laudantium nihil est eveniet saepe distinctio consequuntur fugit aliquid voluptatem minima soluta?</p>
-									<a href="#"><p class="reply-comment-btn">reply</p></a>				
-  							</div>		
-  					</div>
+							@foreach ($messages as $message)
+							<div class="media">
+   								<a class="pull-left" href="#">
+      								<img class="media-object" src="http://placehold.it/68x68" alt="Media Object">
+   								</a>
+   									<div class="media-body">
+      									<h4 class="media-heading">{{ $message->user->full_name }}</h4>
+				      						{{ $message->body }}
+   									</div>
+   									<form method="post" action="/message/delete/{{ $message->id }}">
+   										<button type="submit" class="btn btn-danger">Delete</button>
+									</form>
 
-  					<div class="comment-box-reply">
-  						<img src="http://placehold.it/40x40" alt="..." class="img-thumbnail">
-							<div class="paragraph-comment-reply">
-  								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae fugiat, sed pariatur ab quaerat sit, nam voluptate hic laudantium nihil est eveniet saepe distinctio consequuntur fugit aliquid voluptatem minima soluta?</p>
-									<a href="#"><p class="reply-comment-btn">reply</p></a>				
-  							</div>		
+							</div>
+									@endforeach				
+  							</div>
+  							@stop		
+  					</div>
+  					
+	
   					</div>
 					
 					

@@ -131,19 +131,3 @@ p, pre {
 .reply-comment-btn {
 	float: right;
 }
-
-.comment-box-reply{
-	width: 90%;
-	height: 60px;
-	float: left;
-	margin-top: 20px;
-	margin-left: 60px;
-	border-top: solid 1px #000;
-}
-.paragraph-comment-reply {
-	width: 90%;
-	float: left;
-	padding-left: 10px;
-	margin: 10px 0px 0px 0px;
-	font-size: 12px;
-}
