@@ -74,6 +74,8 @@ Route::post('/message', function() {
 		$message = new Message;
 		$message->body = $body;
 		$message->user_id = Auth::id();
+		$message->save();
+		return Redirect::to('/home');
 	}
 	return Redirect::to('/');
 });
